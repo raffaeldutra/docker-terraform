@@ -22,8 +22,8 @@ You need to provide a folder containing your infrastructure's definition.
 ## What does this image do?
 
 * Terraform binary installation
-* Creates a volume called "state". This volume is mapped to /state on the container
-* All files/directories created will be in the /state folder. It's necessary to maintain the "infrastructure state" for Terrraform knows what to do in your infrastructure and it should/must be in your source control management.
+* Creates a volume called "state". This volume is mapped to `/state` on the container
+* All files/directories created will be in the `/state` folder. It's necessary to maintain the "infrastructure state" for Terrraform knows what to do in your infrastructure and it should/must be in your source control management.
 * You need to pass your folder containing the infrastructure's definition, in my example below it is my current directory `$(pwd)`.
 
 ## How to build this image?
