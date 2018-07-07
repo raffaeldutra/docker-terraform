@@ -1,5 +1,6 @@
 FROM alpine:2.7
 MAINTAINER "HashiCorp Terraform Team <terraform@hashicorp.com>"
+MAINTAINER "Rafael Dutra <raffaeldutra@gmail.com> https://rafaeldutra.me"
 
 ENV TERRAFORM_VERSION=0.11.7
 ENV TZ=America/Sao_Paulo
