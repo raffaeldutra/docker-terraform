@@ -1,8 +1,9 @@
 FROM alpine:2.7
-MAINTAINER "HashiCorp Terraform Team <terraform@hashicorp.com>"
-MAINTAINER "Rafael Dutra <raffaeldutra@gmail.com> https://rafaeldutra.me"
+LABEL maintainer="HashiCorp Terraform Team <terraform@hashicorp.com>"
+LABEL maintainer="Rafael Dutra <raffaeldutra@gmail.com> https://rafaeldutra.me"
+LABEL version="0.12.0"
 
-ENV TERRAFORM_VERSION=0.11.7
+ENV TERRAFORM_VERSION=0.12.0
 ENV TZ=America/Sao_Paulo
 
 RUN apk add --update git curl openssh
