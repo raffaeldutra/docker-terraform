@@ -48,6 +48,7 @@ On this example:
 ```bash
 docker run --rm \
 -v $(pwd):/terraform \
+-v $(pwd)/modules:/terraform/modules \
 -v ${HOME}/.aws:/root/.aws \
 raffaeldutra/docker-terraform:v0.12.0 \
 terraform init
@@ -60,6 +61,7 @@ The `terraform plan` command.
 ```bash
 docker run --rm \
 -v $(pwd):/terraform \
+-v $(pwd)/modules:/terraform/modules \
 -v ${HOME}/.aws:/root/.aws \
 raffaeldutra/docker-terraform:v0.12.0 \
 terraform plan
@@ -74,6 +76,7 @@ Here we need to map `ssh` directory, because on this example, it generates keys 
 ```bash
 docker run --rm \
 -v $(pwd):/terraform \
+-v $(pwd)/modules:/terraform/modules \
 -v ${HOME}/.aws:/root/.aws \
 -v $(pwd)/ssh:/tmp/ssh \
 raffaeldutra/docker-terraform:v0.12.0 \
@@ -87,6 +90,7 @@ The `terraform destroy` command.
 ```bash
 docker run --rm \
 -v $(pwd):/terraform \
+-v $(pwd)/modules:/terraform/modules \
 -v ${HOME}/.aws:/root/.aws \
 raffaeldutra/docker-terraform:v0.12.0 \
 terraform destroy -auto-approve
